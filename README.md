@@ -23,13 +23,13 @@ A simple **React-based Personal Task Manager** to manage tasks with features lik
 ## Screenshots
 
 **1. Home Page:**  
-![Home Page](./screenshots/home.png)
+![Home Page](screenshots/home.png)
 
 **2. Add Task Page:**  
-![Add Task Page](./screenshots/add-task.png)
+![Add Task Page](screenshots/add-task.png)
 
 **3. Edit Task Page:**  
-![Edit Task Page](./screenshots/edit-task.png)
+![Edit Task Page](screenshots/edit-task.png)
 
 
 ---
