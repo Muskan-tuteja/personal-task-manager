@@ -1,26 +1,24 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function TaskItem({ task, updateTaskStatus, deleteTask }) {
-  const getStatusColor = (status) => {
-    if (status === "Done") return "green";
-    if (status === "In Progress") return "orange";
-    return "red";
-  }
+function TaskItem({ task, updateTaskStatus, deleteTask, editTask }) {
+  const navigate = useNavigate();
+
+  const handleEdit = () => {
+    editTask(task); // set task to edit in App state
+    navigate("/add"); // navigate to form page
+  };
 
   return (
     <div className="task-item">
       <h3>{task.title}</h3>
       <p>{task.description}</p>
-      {task.deadline && <p>Deadline: {task.deadline}</p>}
-      <p>Status: <span style={{color: getStatusColor(task.status)}}>{task.status}</span></p>
-
-      <select value={task.status} onChange={e=>updateTaskStatus(task.id, e.target.value)}>
-        
-        <option>Pending</option>
-        <option>In Progress</option>
-        <option>Done</option>
-      </select>
-      <button onClick={()=>deleteTask(task.id)}>Delete</button>
+      <p>Status: <span className={`status ${task.status.replace(" ", "-")}`}>{task.status}</span></p>
+      <p>Deadline: {task.deadline}</p>
+      <div className="task-buttons">
+        <button onClick={() => deleteTask(task.id)} className="delete-btn">Delete</button>
+        <button onClick={handleEdit} className="edit-btn">Edit</button>
+      </div>
     </div>
   );
 }

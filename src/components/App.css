@@ -1,6 +1,6 @@
 /* ================= General Styling ================= */
 body {
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #eef2f7;
   margin: 0;
   padding: 0;
@@ -49,6 +49,7 @@ form select:focus {
   outline: none;
   border-color: #4cd137;
   box-shadow: 0 0 8px rgba(76, 209, 55, 0.4);
+
 }
 
 form textarea {
@@ -103,8 +104,8 @@ form button:hover {
   margin: 0;
   font-size: 1.3rem;
   color: #2f3640;
-   word-wrap: break-word;
-   overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .task-item p {
@@ -146,32 +147,72 @@ form button:hover {
   cursor: pointer;
 }
 
-.task-item button {
-  width: 110px;
-  padding: 9px;
-  border: none;
-  border-radius: 8px;
-  background-color: #e84118;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 12px;
+/* Task buttons container */
+.task-buttons {
+  display: flex;
+  justify-content: space-between; /* Delete left, Edit right */
+  margin-top: 10px;
 }
 
-.task-item button:hover {
-  background-color: #c23616;
-  transform: translateY(-2px);
+/* Delete button styling */
+.delete-btn {
+  background-color: #e84118;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
+
+.delete-btn:hover {
+  background-color: #c23616;
+}
+
+/* Edit button styling */
+.edit-btn {
+  background-color: #0097e6;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #0984e3;
+}
+
 .no-tasks {
   text-align: center;
   font-size: 1.2rem;
   color: #888;
   padding: 10px;
   font-style: italic;
-  
+}
+/* Add Task Button Styling */
+.add-task-btn {
+  padding: 12px 25px;
+  background-color: #4cd137;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+  margin-left: 200px;
 }
 
+.add-task-btn:hover {
+  background-color: #44bd32;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 /* ================= Responsive Design ================= */
 @media (max-width: 650px) {
