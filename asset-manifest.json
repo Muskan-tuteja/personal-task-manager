@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/personal-task-manager/static/css/main.f90d9672.css",
+    "main.js": "/personal-task-manager/static/js/main.e07a5935.js",
+    "index.html": "/personal-task-manager/index.html",
+    "main.f90d9672.css.map": "/personal-task-manager/static/css/main.f90d9672.css.map",
+    "main.e07a5935.js.map": "/personal-task-manager/static/js/main.e07a5935.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f90d9672.css",
+    "static/js/main.e07a5935.js"
+  ]
+}
