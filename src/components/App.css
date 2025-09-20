@@ -1,0 +1,195 @@
+/* ================= General Styling ================= */
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f7;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= App Container ================= */
+.App {
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ================= Header ================= */
+.App h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+/* ================= Form Styling ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 50px;
+}
+
+form input,
+form textarea,
+form select {
+  padding: 14px;
+  border: 1px solid #d1d8e0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.25s ease-in-out;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none;
+  border-color: #4cd137;
+  box-shadow: 0 0 8px rgba(76, 209, 55, 0.4);
+}
+
+form textarea {
+  min-height: 80px;
+  resize: none;
+}
+
+form button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #4cd137, #44bd32);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(76, 209, 55, 0.4);
+}
+
+/* ================= Task List ================= */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ================= Individual Task Card ================= */
+.task-item {
+  background: #f9fbfe;
+  border: 1px solid #d1d8e0;
+  border-radius: 15px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.25s ease-in-out;
+  flex: 1 1 250px; /* flexible width */
+  max-width: 100%;
+}
+
+.task-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.task-item h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #2f3640;
+   word-wrap: break-word;
+   overflow-wrap: break-word;
+}
+
+.task-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #57606f;
+}
+
+/* ================= Status Color Coding ================= */
+.status {
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.status.Pending {
+  color: #e84118;
+  background-color: #fceae7;
+}
+
+.status.In-Progress {
+  color: #f39c12;
+  background-color: #fff5e6;
+}
+
+.status.Done {
+  color: #44bd32;
+  background-color: #e6f9ea;
+}
+
+/* ================= Task Actions ================= */
+.task-item select {
+  width: 160px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d8e0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-item button {
+  width: 110px;
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e84118;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+}
+
+.task-item button:hover {
+  background-color: #c23616;
+  transform: translateY(-2px);
+}
+.no-tasks {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  padding: 10px;
+  font-style: italic;
+  
+}
+
+
+/* ================= Responsive Design ================= */
+@media (max-width: 650px) {
+  .App {
+    margin: 25px;
+    padding: 25px;
+  }
+
+  form button,
+  .task-item button {
+    width: 100%;
+  }
+
+  .task-item select {
+    width: 100%;
+  }
+
+  .task-item {
+    padding: 18px;
+  }
+}
